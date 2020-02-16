@@ -14,8 +14,8 @@
 
                 for (var i=0; i<=liczbaPrzejsc; i++)
                 {
-                   var losowaLiczba = (Math.floor(Math.random()*ostatniElement_liczba+1)); //losuje liczbe od 0 do ostatniego elementu w zdaniu
-                   litera = zdanie.charCodeAt(losowaLiczba); //zamiana litery na kod ascii
+                   var losowaLiczba = (Math.floor(Math.random()*ostatniElement_liczba+1)); //Losuje liczbę od 0 do ostatniego elementu w zdaniu.
+                   litera = zdanie.charCodeAt(losowaLiczba); //Zamiana litery na kod ASCII.
             
                    if(litera>64 && litera<91){
                         litera=litera+32;
@@ -27,7 +27,7 @@
                     {
                         break;
                     }
-                    var ZLitera = String.fromCharCode(litera) //przekształcenie litery z kodu ascii
+                    var ZLitera = String.fromCharCode(litera) //Przekształcenie litery z kodu ASCII.
                 }
                     document.write(zdanie2);
             }
