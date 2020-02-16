@@ -1,0 +1,37 @@
+<!doctype html>
+    <head>
+        <meta charset = "utf-8" />
+        <title> zad6 </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    </head>
+    <body>
+        <script>
+            function mixer (zdanie)
+            {
+                var ostatniElement_liczba = zdanie.length;
+                var liczbaPrzejsc = (Math.floor(Math.random()*ostatniElement_liczba));
+                var zdanie1= zdanie;
+
+                for (var i=0; i<=liczbaPrzejsc; i++)
+                {
+                   var losowaLiczba = (Math.floor(Math.random()*ostatniElement_liczba+1)); //losuje liczbe od 0 do ostatniego elementu w zdaniu
+                   litera = zdanie.charCodeAt(losowaLiczba); //zamiana litery na kod ascii
+            
+                   if(litera>64 && litera<91){
+                        litera=litera+32;
+                    }
+                   else if(litera>96 && litera<123){
+                        litera=litera-32;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    var ZLitera = String.fromCharCode(litera) //przekształcenie litery z kodu ascii
+                }
+                    document.write(zdanie2);
+            }
+            mixer("ala ma kota")
+        </script>
+    </body>
+</html>
