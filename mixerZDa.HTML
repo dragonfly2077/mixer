@@ -9,10 +9,12 @@
             function mixer (zdanie)
             {
                 var ostatniElement_liczba = zdanie.length;
-                var liczbaPrzejsc = (Math.floor(Math.random()*ostatniElement_liczba));
+                var liczbaPrzejsc = (Math.floor(Math.random(0,ostatniElement_liczba)));
                 var zdanie1= zdanie;
+                const tab1; 
 
-                for (var i=0; i<=liczbaPrzejsc; i++)
+
+                for (var i=0; i<=5; i++)
                 {
                    var losowaLiczba = (Math.floor(Math.random()*ostatniElement_liczba+1)); //Losuje liczbę od 0 do ostatniego elementu w zdaniu.
                    litera = zdanie.charCodeAt(losowaLiczba); //Zamiana litery na kod ASCII.
@@ -28,9 +30,11 @@
                         break;
                     }
                     var ZLitera = String.fromCharCode(litera) //Przekształcenie litery z kodu ASCII.
+                    //tab1[i]=losowaLiczba;
+                    document.write(liczbaPrzejsc);
                 }
-                    document.write(zdanie2);
             }
+
             mixer("ala ma kota")
         </script>
     </body>
