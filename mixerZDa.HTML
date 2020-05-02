@@ -1,23 +1,17 @@
 <!doctype html>
     <head>
         <meta charset = "utf-8" />
-        <title> zad6 </title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     </head>
     <body>
         <script>
-            function mixer (zdanie)
+            function mixer(zdanie)
             {
                 var ostatniElement_liczba = zdanie.length;
-                var liczbaPrzejsc = (Math.floor(Math.random(0,ostatniElement_liczba)));
-                var zdanie1= zdanie;
-                const tab1; 
-
-
-                for (var i=0; i<=5; i++)
+                var liczbaPrzejsc = Math.floor(Math.random()*ostatniElement_liczba)+1;
+                for (var i=0; i<=liczbaPrzejsc; i++)
                 {
                    var losowaLiczba = (Math.floor(Math.random()*ostatniElement_liczba+1)); //Losuje liczbę od 0 do ostatniego elementu w zdaniu.
-                   litera = zdanie.charCodeAt(losowaLiczba); //Zamiana litery na kod ASCII.
+                   var litera = zdanie.charCodeAt(losowaLiczba); //Zamiana litery na kod ASCII.
             
                    if(litera>64 && litera<91){
                         litera=litera+32;
@@ -26,16 +20,15 @@
                         litera=litera-32;
                     }
                     else
-                    {
-                        break;
-                    }
+                   {
+                    continue;
+                   }
                     var ZLitera = String.fromCharCode(litera) //Przekształcenie litery z kodu ASCII.
-                    //tab1[i]=losowaLiczba;
-                    document.write(liczbaPrzejsc);
+                   document.write(ZLitera);
+                   document.write(zdanie[0]);
                 }
             }
-
-            mixer("ala ma kota")
+            mixer("ala MA kota")
         </script>
     </body>
 </html>
